@@ -19,3 +19,50 @@ pcs property show                     # Show cluster properties
 pcs constraint show                   # Show constraints
 pcs constraint create location <resource> <node>  # Set resource location
 pcs constraint delete <constraint_id>            # Delete constraint
+
+
+
+
+
+
+
++------------------+
+|    Cluster Nodes  | <--- physical/virtual servers
++------------------+
+         |
+         v
++------------------+
+|    Corosync      | <--- cluster communication & membership
++------------------+
+         |
+         v
++------------------+
+|    Pacemaker     | <--- resource management & failover
++------------------+
+         |
+         v
++------------------+
+|    Resources     | <--- managed services/apps
++------------------+
+
++------------------+
+|    STONITH       | <--- fencing to isolate failed nodes
++------------------+
+
++------------------+
+|     pcs CLI      | <--- management interface
++------------------+
+
+
+
+-->Here are the main components of a PCS (Pacemaker) cluster:
+
+Nodes – The servers or machines in the cluster.
+
+Pacemaker – The cluster resource manager that controls resources and failover.
+
+Corosync – The messaging layer that handles communication and membership between nodes.
+
+Resources – The services or applications managed by the cluster.
+
+Fencing (STONITH) – The mechanism to isolate or reboot failed nodes to protect cluster integrity.
