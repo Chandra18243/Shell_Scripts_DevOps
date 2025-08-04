@@ -1,0 +1,21 @@
+pcs cluster auth node1 node2 node3     # Authenticate nodes
+pcs cluster start                       # Start cluster
+pcs cluster stop                        # Stop cluster
+pcs status                             # Show cluster status
+pcs cluster node status                 # Show node status
+pcs cluster node standby node2         # Put node standby
+pcs cluster node resume node2           # Resume node
+pcs cluster node fence node2            # Fence (reboot) node
+pcs cluster node add node4              # Add new node
+pcs cluster node remove node4           # Remove node
+pcs resource show                       # Show resources
+pcs resource start my_resource          # Start resource
+pcs resource stop my_resource           # Stop resource
+pcs resource cleanup my_resource        # Clear resource failure
+pcs config show                        # Show config
+pcs config edit                        # Edit config
+crm_mon                               # Real-time monitor
+pcs property show                     # Show cluster properties
+pcs constraint show                   # Show constraints
+pcs constraint create location <resource> <node>  # Set resource location
+pcs constraint delete <constraint_id>            # Delete constraint
