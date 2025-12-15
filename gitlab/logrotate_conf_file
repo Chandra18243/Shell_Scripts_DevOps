@@ -1,0 +1,16 @@
+/var/opt/gitlab_backup/gitlab_backup_cnu54tw_*.tar.gz {
+    daily
+    rotate 15
+    missingok
+    notifempty
+    compress
+    dateext
+    dateformat -%Y-%m-%d_%H-%M-%S
+}
+
+
+#keep it under /etc/logrotate.d/gitlab_backup
+
+#Crojob to run everyday daily at 5am
+
+0 5 * * * /usr/local/bin/gitlab_backup.sh >> /var/log/gitlab_backup.log 2>&1
