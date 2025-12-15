@@ -18,3 +18,7 @@ DATE=$(date +%F_%H-%M-%S)
 tar -czvf "$BACKUP_DIR/gitlab_backup_${BRANCH}_$DATE.tar.gz" .
 
 echo "Backup completed: $BACKUP_DIR/gitlab_backup_${BRANCH}_$DATE.tar.gz"
+
+
+
+#keep script under /usr/local/bin/
